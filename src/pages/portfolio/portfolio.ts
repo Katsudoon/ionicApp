@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { APIPage } from '../API/API';
+import { LinkedinPage } from '../linkedin/linkedin';
+import { MapPage } from '../map/map';
+
 
 /**
  * Generated class for the PortfolioPage page.
@@ -15,11 +19,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PortfolioPage {
 
+  goToApi() {
+    this.navCtrl.push(APIPage);
+  }
+  goTolinkedin() {
+    this.navCtrl.push(LinkedinPage);
+  }
+  goToMap() {
+    this.navCtrl.push(MapPage);
+  }
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PortfolioPage');
+
   }
+
+
 
 }

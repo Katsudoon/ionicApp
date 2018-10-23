@@ -7,12 +7,44 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>portfolio</ion-title>
+    <ion-title>Portfolio</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+<ion-card (click)="goToApi()">
+  <ion-card-content>
+    <img class="img" src="https://raw.githubusercontent.com/ioBroker/ioBroker.openweathermap/master/admin/openweathermap.png" />
+    <ion-card-title>
+      Exemple API
+    </ion-card-title>
+    <p>
+      Exemple d'utilisation d'une API pour la méteo.
+    </p>
+  </ion-card-content>
+</ion-card>
+<ion-card (click)="goTolinkedin()">
+  <ion-card-content>
+    <img class="img" src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-512.png" />
+    <ion-card-title>
+      Mon Linkedin
+    </ion-card-title>
+    <p>
+      Acceder a mon contenu Linkedin dans un browser.
+    </p>
+  </ion-card-content>
+</ion-card>
+<ion-card (click)="goToMap()">
+  <ion-card-content>
+    <img class="img" src="https://static.thenounproject.com/png/948245-200.png" />
+    <ion-card-title>
+      Geolocalisation
+    </ion-card-title>
+    <p>
+      Acceder a votre position.
+    </p>
+  </ion-card-content>
+</ion-card>
 </ion-content>

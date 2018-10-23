@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>API</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p>Enter a Belgium city:</p>
+<input type="text" [(ngModel)]="inputTown">
+<button class="button1" ion-button (click)="getWeather()">Choisir</button>
+<ion-card *ngIf='hidden'>
+  <ion-card-content>
+    <ion-card-title>
+      <p *ngIf='weatherInfo'>{{weatherInfo.name}}</p>
+    </ion-card-title>
+      <p *ngIf='weatherInfo'>{{weatherInfo.main.temp}} C°</p>
+  </ion-card-content>
+</ion-card>
+</ion-content>

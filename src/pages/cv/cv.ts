@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the CvPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 @IonicPage()
 @Component({
@@ -15,11 +9,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CvPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  pdfSrc: string = 'assets/CV_Alexis_Gauthier_Developpeur-Android-IOS_2018.pdf';
+
+  share(){
+    this.socialSharing.share(null, "This is my resume", "www/assets/CV_Alexis_Gauthier_Developpeur-Android-IOS_2018.pdf", null).then(() => {
+      // Success!
+    }).catch(() => {
+      // Error!
+    });
+  }
+
+  constructor(public navCtrl: NavController, private socialSharing: SocialSharing) {
+
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CvPage');
-  }
 
+  }
 }
